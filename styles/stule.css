@@ -1,8 +1,10 @@
+/* style.css а не stule.css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* чем отличаются * и  body? зачем эта дополнительная фрагментация? */
 body {
   font-family: "Roboto", sans-serif;
   background: #282b38;
@@ -13,6 +15,7 @@ header {
   justify-content: space-evenly;
 }
 .logo {
+  /* внутри только img. Для чего здесь флексы? */
   display: flex;
   margin-top: 26px;
 }
@@ -27,16 +30,37 @@ header {
 .a_text {
   text-decoration: none;
   color: white;
+  /*
+    если у нескольких похожих элементов одно или несколько свойств одинаковые, то применяется
+    группирование селекторов, напр.:
+    .a_text, .a_text_2 {
+      text-decoration: none;
+      color: #fff;
+    }
+    .a_text {
+      margin-left: 5%;
+    }
+  */
   margin-left: 5%;
 }
 .button {
   width: 9%;
   height: 50px;
   background: rgb(255 129 0);
+  /*
+    свойство background имеет много составляющих. Если задаешь только background-color, то и свойство должно быть background-color
+    цвета должны задаваться в одинаковом формате. Line 28, line 32 color задан как white, а здесь уже в rgb формате.
+  */
   border-radius: 90px;
   margin-top: 25px;
 }
 .a_button {
+  /*
+    у всех кнопок есть одинаковые свойства. Для этого задается несколько классов в html.
+    Напр.: <a class="button download_button" href="#">Загрузить фото товара</a>
+    И родительский класс .button стилизует одинаковые для всех кнопок свойства, а родной .download_button
+    уже свойства, присущие именно этой конкретной кнопке загрузки файла
+  */
   text-decoration: none;
   color: white;
   display: flex;
@@ -46,6 +70,7 @@ header {
 }
 .container_2 {
   background-image: url(../images/Rectangle\ 3.png);
+  /* пробелы в названиях файлов желательно не применять Rectangle 3.png */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

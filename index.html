@@ -19,20 +19,56 @@
         <img src="./images/logo.svg" alt="" />
       </div>
       <div class="container">
+      <!--
+        какую информацию несет название класса container?
+        и далее container_2 ... container_29? Класс должен иметь описательное название
+        если этот элемент служит оберткой, то и в название можно включить ..._wrapper || ..._wrap
+        то есть здесь это как вариант .navigation_wrapper || .navigation_container
+      -->
         <div class="text">
+        <!--
+          для чего этот промежуточный div? Без него не измениться ничего
+        -->
           <a class="a_text_2" href="#">Цены и сроки</a>
+          <!--
+            для чего введение отдельного класса?
+            Есть https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child
+            при этом еще и дублирование свойств происходит:
+              text-decoration: none;
+              color: white;
+            для .a_text_2 и .a_text
+          -->
           <a class="a_text" href="#">Услуги </a>
+          <!--
+            если хочется разные линки стилизовать по-разному, то название класса должно описывать что это за линк,
+            напр. .nav_link
+          -->
           <a class="a_text" href="#">О компании</a>
           <a class="a_text" href="#">Контакты</a>
           <a class="a_text" href="#">Оформить груз</a>
         </div>
       </div>
       <div class="button">
+      <!--
+        для чего данная обертка? Но сначала нужно подумать. Объяснение есть и, возможно, она нужна
+        Но если это обертка, то и класс должен описывать, что это обертка, т.к. сама кнопка у тебя не здесь,
+        а в следующем элементе. И класс должен это описывать
+      -->
         <a class="a_button" href="#">Оставить заявку</a>
+      <!--
+        класс .a_button не говорит ни о чем
+        И почему для кнопки применяется тег ссылки? Если это кнопка, почему не <button></button>
+      -->
       </div>
     </header>
     <div class="container_2">
+    <!--
+      .container_2??? возможно, это что-то связанное с .describe_wrap || .describe_container
+    -->
       <div class="title">
+        <!--
+          например .describe_title и т.д.
+        -->
         <div class="text_2">
           <p class="p_text_2">ПРЯМОЕ КАРГО ИЗ КИТАЯ</p>
           <p class="p2_text_2">
@@ -48,9 +84,24 @@
       </div>
     </div>
     <div class="container_3">
+    <!--
+      .calculation_wrap || .calculation_container?
+    -->
       <div class="container_4">
+        <!--
+          .calculation_form_wrapper || .calculation_form_container?
+        -->
         <div class="container_5">
+        <!--
+          .calculation_form_title?
+        -->
+        <!--
+          .container_5 вложен в .container_4, который вложен в .container_3. Для чего это всё и о чем это должно рассказать?
+        -->
           <p class="p_container_5">
+            <!--
+              .calculation_title_text ?
+            -->
             ПОЛУЧИТЬ РАССЧЕТ СТОИМОСТИ ДОСТАВКИ ВАШЕГО ГРУЗА
           </p>
           <hr class="hr" />
@@ -122,13 +173,25 @@
             </div>
           </div>
           <div class="container_8">
+          <!--
+            относится к форме, но почему-то снаружи формы
+          -->
+          <!--
+            относится к форме, но почему-то снаружи формы
+          -->
             <p class="p_container_8">фотография.jpeg</p>
             <a class="a_container_8" href="#">Удалить фото</a>
           </div>
           <div class="button_3">
+            <!--
+              относится к форме, но почему-то снаружи формы
+            -->
             <a class="a_button_3" href="#">Загрузить фото товара</a>
           </div>
           <div class="button_4">
+            <!--
+              относится к форме, но почему-то снаружи формы
+            -->
             <div class="link_3">
               <a class="a_link_3" href="#">Следующий шаг</a>
               <img class="img_link_3" src="./images/button.svg" alt="" />
