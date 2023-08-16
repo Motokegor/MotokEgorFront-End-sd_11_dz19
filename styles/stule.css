@@ -19,7 +19,7 @@ header {
   display: flex;
   margin-top: 26px;
 }
-.container {
+.nav_container {
   margin-top: 41px;
   width: 32%;
 }
@@ -71,6 +71,7 @@ header {
 .container_2 {
   background-image: url(../images/Rectangle\ 3.png);
   /* пробелы в названиях файлов желательно не применять Rectangle 3.png */
+  /* напр., Rectangle3.png, Rectangle_3.png, Rectangle-3.png */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,6 +126,8 @@ header {
 .img_link {
   height: 27px;
   padding-top: 0px;
+  /* достаточно 0, без указания единиц измерения */
+  /* 0px - bad practice */
   margin-top: 21px;
 }
 .container_3 {
@@ -153,6 +156,7 @@ header {
   width: 85px;
   height: 2px;
   border: 0px;
+  /* bad practice */
   background: #89c249;
   top: 67px;
   left: 497px;
@@ -441,8 +445,10 @@ h1 {
   height: 2px;
   background: #e58d35;
   border: 0px;
-  margin: 0 auto;
-  margin-top: 19px;
+  /* bad practice */
+  margin: 0 auto 19px;
+  /*margin-top: 19px;*/
+  /* зачем и margin и margin-top */
 }
 .container_12 {
   display: flex;
@@ -470,14 +476,17 @@ h2 {
   height: 2px;
   background: #89c249;
   border: 0px;
+  /* bad practice */
   margin: 0 auto;
   margin-top: 19px;
+  /* зачем и margin и margin-top */
 }
 .container_15 {
   display: flex;
   justify-content: center;
   margin: 0 auto;
   margin-top: 50px;
+  /* зачем и margin и margin-top */
 }
 .box {
   width: 360px;
@@ -796,20 +805,27 @@ h2 {
 .container_16 {
   margin: 0 auto;
   margin-right: 0px;
+  /* bad practice */
+  /* зачем и margin и margin-top */
 }
 .container_17 {
   margin: 0 auto;
+  /* 0 - good practice */
   margin-left: 30px;
   margin-right: 0px;
+  /* bad practice */
+  /* зачем и margin и margin-left и margin-right */
 }
 .container_18 {
   margin: 0 auto;
   margin-left: 30px;
+  /* зачем и margin и margin-left */
 }
 .container_19 {
   width: 96%;
   margin: 0 auto;
   margin-top: 100px;
+  /* зачем и margin и margin-top */
   height: 794px;
   border-radius: 20px;
   background: #363a4d;
@@ -825,7 +841,9 @@ h2 {
 .hr_4 {
   margin: 0 auto;
   border: 0px;
+  /* bad practice */
   margin-top: 20px;
+  /* зачем и margin и margin-top */
   width: 85px;
   height: 2px;
   background: #e58d35;
@@ -951,6 +969,7 @@ h2 {
   height: 2px;
   background: #89c249;
   border: 0px;
+  /* bad practice */
   margin-top: 19px;
 }
 .p2_text_20 {
@@ -1095,7 +1114,9 @@ h3 {
   background: #ffffff;
   border-radius: 10px;
   border: 0px;
+  /* bad practice */
   margin-bottom: 14px;
+  /* зачем и margin и margin-bottom */
   outline: none;
   padding-left: 20px;
 }
@@ -1112,7 +1133,9 @@ h3 {
   background: #ffffff;
   border-radius: 10px;
   border: 0px;
+  /* bad practice */
   margin-bottom: 26px;
+  /* зачем ещё 1 свойство margin */
   outline: none;
   height: 70px;
   padding-left: 20px;
@@ -1156,6 +1179,7 @@ h3 {
   margin: 0 auto;
   background: #363a4d;
   margin-top: 100px;
+  /* зачем ещё 1 свойство margin */
 }
 .container_26 {
   display: flex;
@@ -1180,8 +1204,10 @@ h3 {
   height: 2px;
   background: #89c249;
   border: 0px;
+  /* bad practice */
   margin: 0 auto;
   margin-top: 19px;
+  /* зачем ещё 1 свойство margin */
 }
 .container_27 {
   display: flex;
@@ -1274,6 +1300,7 @@ h3 {
   width: 60%;
   height: 2px;
   border: 0px;
+  /* bad practice */
   background: #e58d35;
 }
 .link_20 {
@@ -1292,6 +1319,7 @@ footer {
 .img_title_26 {
   width: 172px;
   height: 48.35px;
+  /* очень странное число */
   margin-bottom: 30px;
 }
 .p_title_26 {
@@ -1356,14 +1384,20 @@ footer {
   }
   .container_16 {
     margin: 0 0 0 0px;
+    /* достаточно: margin: 0; */
+    /* bad practice */
   }
   .container_17 {
     margin: 0 0 0 0px;
+    /* bad practice */
     margin-top: 30px;
+    /* зачем ещё 1 свойство margin */
   }
   .container_18 {
     margin: 0 0 0 0px;
+    /* bad practice */
     margin-top: 30px;
+    /* зачем ещё 1 свойство margin */
   }
   .form {
     margin-top: 30px;
@@ -1376,6 +1410,7 @@ footer {
   }
   .hr {
     width: 0px;
+    /* bad practice */
   }
   .title_2 {
     margin-left: 28px;
@@ -1442,9 +1477,11 @@ footer {
   }
   .box_5 {
     margin-left: 0px;
+    /* bad practice */
   }
   .box_6 {
     margin-left: 0px;
+    /* bad practice */
   }
   .title_21 {
     width: 56%;
@@ -1461,9 +1498,11 @@ footer {
   }
   .box_5 {
     margin-left: 0px;
+    /* bad practice */
   }
   .box_6 {
     margin-left: 0px;
+    /* bad practice */
   }
   .title_21 {
     width: 45%;
@@ -1555,6 +1594,7 @@ footer {
   }
   .title_24 {
     margin-left: 0px;
+    /* bad practice */
     width: 75.5%;
   }
   .container_28 {
@@ -1566,6 +1606,7 @@ footer {
   }
   .title_25 {
     margin-left: 0px;
+    /* bad practice */
     width: 75.5%;
   }
   .text_26 {
@@ -1601,7 +1642,7 @@ footer {
   .button {
     display: none;
   }
-  .container {
+  .nav_container {
     display: none;
   }
   h2 {
@@ -1663,6 +1704,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     margin-top: 0px;
+    /* bad practice */
   }
   .title_4 {
     margin-left: 26px;
@@ -1679,10 +1721,12 @@ footer {
   }
   .title_7 {
     margin-left: 0px;
+    /* bad practice */
     margin-top: 20px;
   }
   .title_10 {
     margin-left: 0px;
+    /* bad practice */
     margin-top: 20px;
   }
   .input_5 {
@@ -1697,6 +1741,7 @@ footer {
   .button_3 {
     margin: 0 auto;
     margin-top: 18px;
+    /* зачем ещё 1 свойство margin */
   }
   .text_6 {
     display: flex;
@@ -1757,6 +1802,7 @@ footer {
   .container_9 {
     width: 100%;
     border-radius: 0px;
+    /* bad practice */
     height: 450px;
   }
   h2 {
@@ -1813,10 +1859,12 @@ footer {
     margin: 0 auto;
     width: 65%;
     margin-top: 10px;
+    /* зачем ещё 1 свойство margin */
   }
   .button_2 {
     margin: 0 auto;
     margin-top: 20px;
+    /* зачем ещё 1 свойство margin */
     width: 75%;
   }
   .p_container_5 {
@@ -1849,6 +1897,7 @@ footer {
 .hr_5{
   margin: 0 auto;
   margin-top: 10px;
+  /* зачем ещё 1 свойство margin */
 }
 .title_23{
   width: 85%;
@@ -1875,7 +1924,7 @@ footer {
 .a_title_26 {
   font-size: 12px;
 }
-.p_title_26 {
+a.p_title_26 {
   width: 200%;
   font-size: 15px;
 }
